@@ -1,0 +1,487 @@
+<html>
+    <head>
+        <title>college website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="logo left">
+                <img src="image/patilaliya.jpg"alt="logo left">
+            </div>
+          
+            <div class="PATIL DEGREE COLLEGE FOR WOMEN">
+            <h1>PATIL DEGREE COLLEGE FOR WOMENS</h1>
+
+
+
+            </div>
+
+
+            <div class="logo right">
+                <img src="image/nss.png" alt="logo right">
+            </div>
+            
+        </header>
+        <h1><center>DCN notes chapter 05</center></h1> 
+        <h2> <center>Transport and application layer</center></h2>
+        <div class="chapter 05 notes">
+            <h2>TRANSPORT AND APPLICATION LAYER</h2>
+            <p>
+                The transport layer is the fourth layer of the OSI (Open Systems Interconnection)<br>
+                model, and it plays a crucial role in managing end-to-end communication between
+                devices on a network.<br> 
+
+
+            </p>
+            
+                <p>
+
+
+                The transport layer receives data (message) from the Application layer and then
+                performs Segmentation, divides the actual message into segments,<br> adds the source
+                and destination’s port numbers into the header of the segment, and transfers the
+                message to the Network layer. (At the sender’s side: )<br>
+
+
+                </p>
+                <P>
+
+
+                    The transport layer receives data from the Network layer, reassembles the segmented
+                    data, reads its header, identifies the port number,<br> and forwards the message to the
+                    appropriate port in the Application layer. (At the receiver’s side: )<br>
+
+
+                </P>
+                <h2>Elements of transport service</h2>
+                <p>
+                    The transport layer also determines the type of service provided to the users from
+                   the session layer.<br> An error-free point-to-point communication to deliver messages in the
+                   order in which they were transmitted is one of the key functions of the transport layer.<br>
+
+                   </p>
+                   <h3>1)Protocols:</h3>
+                   <p>
+                     Transmission Control Protocol (TCP): Provides reliable, connection-oriented
+                      communication with error recovery, flow control, and data
+                    segmentation/reassembly.<br> It guarantees that data packets are delivered
+                    accurately and in the correct order.<br>
+                    User Datagram Protocol (UDP): Offers connectionless, faster communication
+                     without built-in reliability or flow control.<br> It is used when speed is critical and
+                     occasional data loss is acceptable, such as in real-time applications like video
+                     streaming and online gaming.<br>
+
+
+                   </p>
+                  <h3>2) Port Numbers:</h3>
+                  <p>
+                     Port Numbers: Used to distinguish different services or applications on a single
+                      device.<br> For example, HTTP traffic typically uses port 80, while HTTPS uses port
+                      443.<br> Port numbers ensure that data is directed to the correct application or
+                      service.<br>
+
+
+                  </p>
+                  <h3>3) Connection Establishment and Termination:</h3> 
+                  <p>
+                     Connection Establishment: In connection-oriented protocols like TCP,<br>
+                     establishing a connection involves a handshake process to set up parameters
+                     and ensure both parties are ready for communication.<br>
+                  </p>
+                  <p>
+                     Connection Termination: Properly closing a connection involves a handshake<br> or
+                     teardown process to ensure that all data is transmitted and resources are
+                    released.<br>
+
+
+                  </p>
+                  <h3>4) Error Detection and Correction:</h3>
+                  <p>
+                     Checksums and Acknowledgements: Protocols like TCP use checksums to
+                      detect errors<br> in transmitted data and acknowledgements to confirm receipt of
+                      data.<br> Retransmission of lost or corrupted packets ensures data integrity.<br>
+
+                  </p>
+                  <h3>5) Flow Control:</h3>
+                  <p>
+                     Flow Control Mechanisms: Manage the rate of data transmission between sender<br>
+                     and receiver to prevent overwhelming the receiver or network congestion.<br> TCP
+                     uses mechanisms like window sizing to control data flow.<br>
+
+
+                  </p>
+                  <h3>6)Segmentation and Reassembly:</h3>
+                  <p>
+                     Segmentation: Large messages are divided into smaller segments or packets for
+                      transmission over the network.<br> Each segment is transmitted separately and
+                      reassembled at the destination.<br>
+                     Reassembly: At the receiving end, segments are reassembled into the original
+                     message in the correct order.<br>
+
+
+                  </p>
+                  <h3>7) Quality of Service (QoS):</h3>
+                  <p>
+                     QoS Mechanisms: Manage network resources to ensure that critical applications
+                      receive the necessary bandwidth, latency, and priority.<br> QoS settings help
+                      prioritize traffic and improve the performance of applications requiring high
+                      reliability or low latency.<br>
+
+
+
+                  </p>
+                  <h3>Elements Of Transport Protocols</h3>
+                  <p>
+                     Transport protocols are crucial in networking as they manage the end-to-end
+                      communication between systems.<br> The primary elements of transport protocols, such as
+                      TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), include:<br>
+
+
+
+                  </p>
+                  <h2>1. Connection Establishment</h2>
+                  <p>
+                      TCP: Uses a handshake process to establish a connection between the sender
+                       and receiver before data transfer begins.<br> This process ensures that both parties
+                       are synchronized and ready to communicate.<br>
+                      UDP: Connectionless, meaning it does not establish a connection before sending
+                       data.<br> It sends packets without ensuring the receiver is ready or has
+                       acknowledged receipt.<br>
+
+
+                  </p>
+                  <h2>2. Data Segmentation and Reassembly</h2>
+                  <p>
+                      Segmentation: Large data messages are broken down into smaller packets or
+                       segments for transmission.<br> This is necessary for efficient data handling and
+                       network management.<br>
+                      Reassembly: At the destination, these segments are reassembled into the
+                       original message.<br> TCP handles this process to ensure data is reconstructed in
+                       the correct order.<br>
+
+
+                  </p>
+                  <h2>3. Error Detection and Correction</h2>
+                  <p>
+                     Checksums: Both TCP and UDP use checksums to detect errors in transmitted
+                      data.<br> The sender calculates a checksum value for the data, and the receiver
+                      verifies it to detect any corruption.<br>
+                     Acknowledgements (TCP): TCP provides acknowledgements (ACKs) to confirm
+                      receipt of data packets.<br> If a packet is lost or corrupted, TCP retransmits it based
+                      on the lack of acknowledgment.<br>
+
+
+                  </p>
+                  <h2>4. Flow Control</h2>
+                  <p>
+                      TCP Flow Control: Manages the rate of data transmission between sender and
+                       receiver to prevent overwhelming the receiver or causing network congestion.<br> It
+                      uses a sliding window mechanism to control the amount of data that can be sent
+                      before receiving an acknowledgment.<br>
+
+
+                  </p>
+                  <h2>5. Congestion Control</h2>
+                  <p>
+                      TCP Congestion Control: Monitors network traffic and adjusts the rate of data
+                       transmission to avoid network congestion.<br> It uses algorithms like slow start,
+                       congestion avoidance, fast retransmit, and fast recovery to dynamically manage
+                       traffic flow.<br>
+
+
+                  </p>
+                  <h2>6. Data Ordering</h2>
+                  <p>
+                      TCP: Ensures data packets are delivered in the correct order.<br> Sequence
+                       numbers are used to reassemble packets in the proper sequence at the
+                       destination.<br>
+                      UDP: Does not guarantee the order of packet delivery.<br> Packets may arrive out of
+                       sequence, and it is up to the application layer to handle any necessary ordering<br>
+
+
+                  </p>
+                  <h2>7. Connection Termination</h2>
+                  <p>
+                      TCP: Handles the orderly termination of connections using a four-way handshake<br>
+                       to ensure that all data is transmitted and acknowledged before closing the
+                       connection.<br>
+                      UDP: No formal termination process since it is connectionless.<br> The protocol does
+                       not maintain state information about connections.<br>
+
+
+                  </p>
+                  <h2>Internet Transport Protocols</h2>
+                  <p>
+                     A transport protocol is a set of rules and procedures responsible for delivering data<br>
+                      between application processes running on different hosts in a network.<br> It enables
+                      communication by providing services such as data integrity, congestion avoidance, and
+                      flow control.<br>
+
+
+
+                  </p>
+                  <h2>1. Transmission Control Protocol (TCP):</h2>
+                  <p>
+                       Connection-Oriented: TCP establishes a connection between the sender and receiver
+                        before transmitting data, ensuring a reliable and ordered communication channel.<br>
+                       Reliable Delivery: Guarantees that data is delivered correctly and in the same order it
+                        was sent.<br> It handles retransmission of lost or corrupted packets and manages data
+                        integrity.<br>
+                    Key Features:<br>
+                     Three-Way Handshake: Establishes a connection through a three-step process (SYN,
+                      SYN-ACK, ACK).<br>
+                     Flow Control: Uses windowing mechanisms to control the rate of data transmission,
+                      preventing the receiver from being overwhelmed<br>.
+                     Error Detection and Correction: Employs checksums to detect errors and
+                      acknowledgements to confirm receipt. Lost packets are retransmitted.<br>
+                     Congestion Control: Adjusts data transmission rates based on network traffic conditions
+                      to avoid congestion.<br>
+                     Data Segmentation and Reassembly: Breaks large messages into smaller packets for
+                      transmission and reassembles them at the destination.<br>
+                  Use Cases:<br>
+                     Web browsing (HTTP/HTTPS)<br>
+                     Email (SMTP, POP3, IMAP)<br>
+                     File transfer (FTP)<br>
+                     Secure communications (SSL/TLS)<br>
+
+
+                  </p>
+                  <h2>2. User Datagram Protocol (UDP)</h2>
+                  <p>
+                      Overview:<br>
+                      Connectionless: UDP does not establish a connection before data transmission.<br> It sends
+                       data as discrete packets (datagrams) without guaranteeing delivery or order.<br>
+                      Fast and Lightweight: Because it lacks connection establishment, flow control,<br> and error
+                       recovery mechanisms, UDP offers lower latency and overhead compared to TCP.<br>
+                   Key Features:<br>
+                 No Handshake: Data is sent without prior setup, reducing latency.<br>
+                 Best-Effort Delivery: Provides no guarantee that packets arrive, are in order, or are free
+                  from errors.<br> The application must handle errors and packet loss if needed.<br>
+                 Simple Error Checking: Uses checksums for error detection but does not include
+                  mechanisms for error correction or retransmission.<br>
+                 No Flow Control or Congestion Control: UDP does not manage data flow or adjust
+                  transmission rates based on network conditions.<br>
+               Use Cases:<br>
+            Streaming media (video/audio)<br>
+            Online gaming<br>
+            VoIP (Voice over IP)<br>
+            DNS (Domain Name System) queries<br>
+
+
+                  </p>
+                  <h2>APPLICATION LAYER</h2>
+                  <p>
+                      The application layer sits at Layer 7, the top of the Open Systems Interconnection               
+                       (OSI) communications model.<br>
+                      It ensures an application can effectively communicate with other applications on
+                       different computer systems and networks.<br>
+                      The application layer is not an application.<br>
+                      Instead, it is a component within an application that controls the communication
+                       method to other devices.<br>
+                      It is an abstraction layer service that masks the rest of the application from the
+                      transmission process.<br>
+
+
+                  </p>
+                  <h2>DOMAIN NAME SYSYTEM(DNS)</h2>
+                    <p>
+                        The Domain Name System (DNS) is like the internet’s phone book.<br>
+                        It helps you find websites by translating easy-to-remember names (like
+                         www.example.com)<br> into the numerical IP addresses (like 192.0.2.1) that
+                         computers use to locate each other on the internet.<br>
+                        Domain Name System (DNS) is a hostname used for IP address translation
+                         services.<br>
+                        DNS is a distributed database implemented in a hierarchy of name servers.<br> It is
+                         an application layer protocol for message exchange between clients and servers.<br>
+                        It is required for the functioning of the Internet.<br>
+
+
+                    </p>
+                    <h1>Types of Domain</h1>
+                    <p>
+                       There are various kinds of domains:<br>
+                      Generic Domains: .com(commercial), .edu(educational), .mil(military),
+                      .org(nonprofit organization),<br> .net(similar to commercial) all these are generic
+                       domains.<br>
+                      Country Domain: .in (India) .us .uk<br>
+                      Inverse Domain: if we want to know what is the domain name of the website. <br>IP
+                       to domain name mapping. So DNS can provide both the mapping for example to
+                       find the IP addresses of geeksforgeeks.org then we have to type<br>
+
+
+
+                    </p>
+                    <h2>WORKING OF DNS</h2>
+                    <p>
+                      1. The client software initiates a DNS resolution (in response to a request by another
+                          software running on the computer) to access another computer using its name.<br>
+                          Configuring a resolver is easy and all that it requires is the IP address of a recursive
+                          server.<br>
+                        2. The recursive server receives DNS queries from the resolvers and is responsible for
+                           executing all the resolution steps needed to provide the final answer to the client
+                           (resolver).<br> Recursive servers query multiple servers until they obtain the answer to
+                           the query.<br>
+                        3. Finally, the authoritative server has authority over a given domain name. In other
+                           words, it is the trusted source of information for the domain name.<br> It contains the
+                           information on which IP addresses are associated with the computers using the
+                           domain name in question.<br>
+                        4. A domain name resolution is initiated by the client software, which sends the query
+                           to a recursive server.<br> This other server generally initiates the resolution by querying
+                           the root servers, which are responsible for the highest level of the domain name
+                           hierarchy.<br>
+                        5. Based on the information received from the root servers, the recursive server<br>
+                          queries other servers until it reaches the server responsible for the desired domain name.<br>
+
+
+                        </p>
+                        <h2>World Wide Web (WWW</h2>
+                        <p>
+                            The World Wide Web (WWW), often simply referred to as<br>
+                            "the web," is a system of interlinked hypertext documents and multimedia
+                             content accessed via the Internet.<br>
+                            It is one of the primary services available on the Internet, enabling users to browse
+                             and interact with a vast array of information and resources<br>
+
+
+                        </p>
+                        <h2>Components of the World Wide Web</h2>
+                        <p>1. Web Pages and Websites:<br>
+                          o Web Page: A document accessible on the web, typically written in HTML<br>
+                                      (Hypertext Markup Language), which can include text, images, links, and
+                                       multimedia.<br>
+                          o Website: A collection of related web pages, often under a single domain
+                                     name, organized to provide specific content or services.<br> For example,
+                                     www.example.com is a website.<br>
+
+
+                   </p>
+                   <h2>2. Web Browsers:</h2>
+                   <p> o Purpose: Software applications used to access and display web pages
+                                  and websites.<br>Examples include Google Chrome, Mozilla Firefox, Safari,
+                                  and Microsoft Edge.<br>JavaScript to render web pages, and can manage bookmarks, history, and
+                                  extensions.<br>
+                                      </p>
+
+                                      <h2>3. Web Servers:</h2>
+                                      <p>
+                                        o Purpose: Servers that host web pages and serve them to users’ web
+                                                   browsers over the Internet.<br> They process incoming requests from
+                                                   browsers and respond with the requested web content.<br>
+                                        o Examples: Apache HTTP Server, Nginx, Microsoft Internet Information
+                                                   Services (IIS).<br>
+                                      </p>
+                                      <h2>4. Web Protocols:</h2>
+                                      <p>
+                                        o HTTP (Hypertext Transfer Protocol): The protocol used to transfer web
+                                          pages and other resources from web servers to browsers.<br> It defines how
+                                          messages are formatted and transmitted.<br> 
+                                        o HTTPS (Hypertext Transfer Protocol Secure): A secure version of
+                                          HTTP that uses encryption <br> (typically via TLS/SSL) to protect the data
+                                          being transmitted between the browser and server<br>
+                                      </p>
+                                      <h2>5. Uniform Resource Locators (URLs):</h2>
+                                      <p>
+                                        o Format: A URL specifies the address of a web resource. It consists of
+                                          several parts:<br>
+                                         Protocol: Indicates the protocol to be used (e.g., http:// or https://).<br>
+                                         Domain Name: Specifies the domain (e.g., www.example.com).
+                                         Path: Identifies the specific resource or page (e.g.,
+                                          /path/to/resource).<br>
+                                         Query Parameters: Optional parameters to pass data to the web
+                                          page (e.g., ?id=123).<br>
+                                        o Example: https://www.example.com/path/to/page?query=value.<br>
+                                      </p>
+                                      <h2>6. Hypertext and Hyperlinks:</h2>
+                                      <p>
+                                        o Hypertext: Text that contains links to other web pages or resources.
+                                          Clicking on a hyperlink navigates to the linked page.<br>
+                                        o HTML Links: Created using <a> tags in HTML. They can link to internal
+                                          pages, external sites, or downloadable files.<br>
+                                      </p>
+                                      <h2>7. Web Development Technologies:</h2>
+                                      <p>
+                                        o HTML (Hypertext Markup Language): The standard language for
+                                          creating and structuring web pages.<br> It defines the structure and content of
+                                        a web page using elements and tags.<br>
+                                        o CSS (Cascading Style Sheets): Used to style and layout web pages,
+                                          including design, colors, fonts, and spacing.<br>
+                                        o JavaScript: A programming language used to create interactive and
+                                          dynamic web content.<br> It allows for client-side scripting to manipulate web
+                                          page elements and respond to user actions.<br>
+                                        o Frameworks and Libraries: Tools and libraries like React, Angular, and
+                                          Vue.js help in building modern web applications with enhanced
+                                          functionality.<br>
+                                      </p>
+                                      <h1>Electronic mailing</h1>
+                                      <p>
+                                        Electronic mailing, commonly known as email, is a method of exchanging digital
+                                        messages between people using electronic devices. It’s a fundamental and widely-used
+                                        form of communication in both personal and professional contexts.<br>
+                                      </p>
+                                      <h2>Key Components of Email</h2>
+                                      <h2>1. Email Addresses:</h2>
+                                      <p>
+                                        o Format: Typically in the format username@domain.com (e.g.,
+                                          john.doe@example.com).<br>
+                                        o Username: The part before the @ symbol, representing the individual user.<br>
+                                        o Domain: The part after the @ symbol, identifying the email service provider
+                                          or organization  <br>
+                                      </p>
+                                      <h2>2. Email Protocols:</h2>
+                                      <p>
+                                        o SMTP (Simple Mail Transfer Protocol): Used for sending and relaying
+                                          emails from the sender’s client to the recipient’s mail server.<br>
+                                        o POP3 (Post Office Protocol version 3): Used for retrieving and downloading
+                                          emails from the server to the client.<br> Emails are typically removed from the
+                                          server after download.<br>
+                                        o IMAP (Internet Message Access Protocol): Used for retrieving and
+                                          managing emails on the server.<br> Emails are kept on the server and can be
+                                          synchronized across multiple devices.<br>
+                                      </p>
+                                      <h2>3. Email Headers:</h2>
+                                      <p>
+                                        o From: Indicates the sender's email address.<br>
+                                        o To: Indicates the recipient's email address.<br>
+                                        o Subject: Provides the subject or topic of the email.<br>
+                                        o Date: Shows when the email was sent.<br>
+                                        o CC/BCC: Carbon Copy and Blind Carbon Copy fields allow for additional
+                                          recipients.<br> CC recipients are visible to all, while BCC recipients are hidden
+                                          from other recipients.<br>
+                                      </p>
+                                      <h2>4. Email Body:</h2>
+                                      <p>
+                                        o Text: The main content of the email, which can be plain text or formatted
+                                          (HTML).<br>
+                                        o Attachments: Files sent with the email, such as documents, images, or other
+                                          media.<br>
+                                      </p>
+                                      <h2>5. Email Security:</h2>
+                                      <p>
+                                        o Encryption: Ensures that the contents of the email are protected from
+                                          unauthorized access. Examples include S/MIME (Secure/Multipurpose
+                                          Internet Mail Extensions) and PGP (Pretty Good Privacy).<br>
+                                        o Spam Filtering: Identifies and filters out unwanted or malicious emails.
+                                          Techniques include content analysis, machine learning, and blacklists.<br>
+
+                                      </p>
+                                      <h2>6. Email Servers</h2>
+                                      <p>
+                                        o Mail Transfer Agent (MTA): Routes and forwards email messages between
+                                          servers.<br>
+
+                                        o Mail Delivery Agent (MDA): Stores and manages incoming email messages.<br>
+                                        o Mail User Agent (MUA): The client application used by users to interact with
+                                          their email (e.g., Microsoft Outlook, Apple Mail, Gmail).<br>
+                                      </p>
+                </div>
+
+        
+
+
+        <footer>
+        <p>kv compound sindhanur</p>
+    </footer>
+    </body> 
+</html>     
+                

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color:antiquewhite;
+   color:black;
+}
+header.logo{
+   width: 100px;
+}
+header.college-name{
+   text-align: center;
+   flex-grow: 1;
+}
+header.college-name{
+   font-size: 24x;
+   font-weight: bold;
+}
+.fontstyle{
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
+}
+.table{
+   font-size: 20;
+   margin-top: 10px;
+   color: black;
+   width: 50%;
+   text-align: center;
+}
+
+
+header.logo{
+   width:100px;
+}
+header.college-name{
+   text-align: centre;
+   flex-grow: 1;
+}
+header.college-name h1{
+   font-size: 24x;
+   font-weight: bold;
+}
+footer{
+   text-align: center;
+   padding: 20px;
+   background-color:aquamarine;
+   color: black;
+}
+footer{
+   text-align: center;
+   padding: 20px;
+   background-color: antiquewhite;
+   color: rgb(134, 26, 26);
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+}
+footer p{ 
+   font-size: 14px;
+}
+

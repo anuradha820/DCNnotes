@@ -1,0 +1,315 @@
+<html>
+    <head>
+        <title>college website</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <div class="logo left">
+                <img src="image/patilaliya.jpg"alt="logo left">
+            </div>
+          
+            <div class="PATIL DEGREE COLLEGE FOR WOMEN">
+            <h1>PATIL DEGREE COLLEGE FOR WOMENS</h1>
+
+
+
+            </div>
+
+
+            <div class="logo right">
+                <img src="image/nss.png" alt="logo right">
+            </div>
+            
+        </header>
+        <h1><center>DCN notes chapter 04</center></h1> 
+        <h2> <center>Introduction of network layer</center></h2>
+        <div class="chapter 04 notes">
+            <p>
+              <li>
+              <ol>
+                <pre class="fontstyle">
+  oThe Network Layer is the third layer of the OSI model.
+  o It handles the service requests from the transport layer and further forwards the service
+    request to the data link layer.<br>
+  o The network layer translates the logical addresses into physical addresses<br>
+  o It determines the route from the source to the destination and also manages the traffic
+    problems such as switching, routing and controls the congestion of data packets.<br>
+  o The main role of the network layer is to move the packets from sending host to the
+    receiving host.<br>
+              </ol>
+            
+            <h2><center>The main functions performed by the network layer are:</center></h2>
+            <li>
+              <ol>
+            
+ o Routing: When a packet reaches the router's input link, the router will move the packets
+   to the router's output link. For example,<br> a packet from S1 to R1 must be forwarded to
+   the next router on the path to S2.<br>
+ o Logical Addressing: The data link layer implements the physical addressing and network
+   layer implements the logical addressing.<br> Logical addressing is also used to distinguish
+   between source and destination system. The network layer adds a header to the packet<br>
+   which includes the logical addresses of both the sender and the receiver.<br>
+ o Internetworking : This is the main role of the network layer that it provides the logical
+   connection between different types of networks.<br>
+ o Fragmentation: The fragmentation is a process of breaking the packets into the smallest
+   individual data units that travel through different networks.<br>
+   </ol>
+
+            
+            <h3><center> Network Layer Design Issues :</center></h3>
+            <p>
+                The network layer comes with some design issues that are described as follows:<br>
+  1. Store and Forward packet switching<br>
+     The host sends the packet to the nearest router. This packet is stored there until it has fully
+     arrived once the <br>link is fully processed by verifying the checksum then it is forwarded to the
+     next router till it reaches the destination. This mechanism is called <br>“Store and Forward packet
+     switching.”<br>
+  2. Services provided to the Transport Layer<br>
+     Through the network/transport layer interface, the network layer transfers its patterns services<br>
+     to the transport layer. These services are described below. But before providing these services
+     to the transfer layer,<br>
+     
+The following goals must be kept in mind:-<br>
+
+       Offering services must not depend on router technology.<br>
+       The transport layer needs to be protected from the type, number, and topology of the
+        available router.<br>
+       The network addresses for the transport layer should use uniform numbering
+        patterns, also at LAN and WAN connections.<br>
+        Based on the connections there are 2 types of services provided :<br>
+       Connectionless – The routing and insertion of packets into the subnet are done
+        individually. No added setup is required.<br>
+       Connection-Oriented – Subnet must offer reliable service and all the packets must be
+        transmitted over a single route.<br>
+
+            </p>
+            <h4>3. Implementation of Connectionless Service</h4>
+            <p>
+                Packets are termed as “datagram’s” and corresponding subnets as “datagram subnets”. When
+the message size that has to be<br> transmitted is 4 times the size of the packet, then the network
+layer divides into 4 packets and transmits each packet to the router via. a few protocols.<br> Each
+data packet has a destination address and is routed independently irrespective of the packets.
+            </p>
+            <h5>4. Implementation of Connection-Oriented service:</h5>
+            <p>
+ To use a connection-oriented service, first, we establish a connection, use it, and then release
+it. In connection-oriented services, the data packets are delivered to the receiver<br> in the same
+order in which they have been sent by the sender. It can be done in either two ways :<br>
+
+   Circuit Switched Connection – A dedicated physical path or a circuit is established
+    between the communicating nodes and then the data stream is transferred.<br>
+   Virtual Circuit Switched Connection – The data stream is transferred over a packet
+    switched network, in such a way that it seems to the user that there is a dedicated<br> path
+    from the sender to the receiver. A virtual path is established here.<br> While, other
+    connections may also be using the same path.<br>
+            </p>
+            <h2><center>Routing algorithms</center></h2>
+            <p>
+       Routing algorithms : are software programs that implement different
+        routing protocols.<br>
+        They work by assigning a cost number to each link;<br>
+        The cost number is calculated using various network metrics.<br>
+        Every router tries to forward the data packet to the next best link with
+         the lowest cost.<br>
+            </p>
+                  Adaptive routing algorithms, also known as dynamic routing algorithms,
+                  makes routing decisions dynamically depending on the network conditions.<br>
+                   It constructs the routing table depending upon the network traffic
+                   and topology.<br>They try to compute the optimized route depending upon the
+                    hop count, transit time and distance.<br>
+            Non-adaptive Routing algorithms, also known as static routing algorithms,
+            construct a static routing table to determine the path through which packets
+            are to be sent.<br> The static routing table is constructed based upon the routing
+            information stored in the routers when the network is booted up.<br>
+           Hybrid Algorithms As the name suggests, these algorithms are a
+           combination of both adaptive and non-adaptive algorithms.<br> In this approach,
+           the network is divided into several regions, and each region uses a different
+           algorithm<br>
+
+           <h3>Flooding Algorithm:</h3>
+           <p>
+               Flooding is a non-adaptive routing technique following this simple method:<br>
+               when a data packet arrives at a router, it is sent to all the outgoing links except the
+                one it has arrived on.<br>
+               All possible routes between Source and Destination are tried. A packet will always
+                get through if the path exists<br>
+               As all routes are tried, there will be at least one route which is the shortest<br>
+               All nodes directly or indirectly connected are visited<br>
+Using flooding technique −<br>
+    An incoming packet to A,
+     will be sent to B, C and D.<br>
+    B will send the packet to C and E.<br>
+    C will send the packet to B, D and F.<br>
+    D will send the packet to C and F.<br>
+    E will send the packet to F.<br>
+    F will send the packet to C and E.<br>
+          <h3>Types of Flooding</h3>
+        <p>
+            Uncontrolled flooding − <br>
+             here, each router unconditionally transmits the
+             incoming data packets to all its neighbours.<br>
+            Controlled flooding −<br> They use some methods to control the transmission of
+             packets to the neighbouring nodes.<br> The two popular algorithms for controlled
+             flooding are Sequence Number Controlled Flooding (SNCF) and Reverse Path
+             Forwarding (RPF).<br>
+            Selective flooding − Here, the routers don't transmit the incoming packets only
+             along those paths which are heading towards approximately in the right
+            direction, instead of every available paths.<br>
+    Advantages of Flooding :<br>
+        Highly Robust, emergency or immediate messages can be sent (eg military
+         applications)<br>
+    
+        Set up the route in virtual circuit<br>
+        Flooding always chooses the shortest path<br>
+        Broadcast messages to all the nodes<br>
+      Disadvantages of Flooding :<br>
+           Network congestion:<br>
+           Wastage of network resources:<br>
+           Security risks:<br>
+           Inefficient use of energy:<br>
+          <h3>Distance Vector Routing (DVR)</h3>
+          <p>
+            Distance Vector Routing (DVR)<br>
+             Distance Vector Routing (DVR) Protocol is a method used by routers to find the best path for
+              data to travel across a network.<br>
+             Each router keeps a table that shows the shortest distance to every other router, based on
+              the number of hops (or steps) needed to reach them.<br>
+             Routers share this information with their neighbors, allowing them to update their tables
+              and find the most efficient routes.<br>
+             This protocol helps ensure that data moves quickly and smoothly through the network.<br>
+             Historically known as the old ARPANET routing algorithm (or known as the Bellman-Ford
+              algorithm).<br>
+
+Example :<br>
+Consider 3-routers X, Y and Z as shown in figure. Each router have their routing table. Every
+routing table will contain distance to the destination nodes.<br>
+X will share it routing table to neighbors and
+neighbors will share it routing table to it to X
+and distance from node X to destination will be
+calculated using bellmen- ford equation.<br>
+As we can see that distance will be
+less going from X to Z when Y is intermediate
+node(hop) so it will be update in routing table X.<br>
+Similarly for Z also
+Final table of DVR <br>
+
+<h3>Applications of Distance Vector Routing Algorithm</h3>
+<br>
+<p>The Distance Vector Routing Algorithm has several uses:<br>
+ Computer Networking: It helps route data packets in networks.<br>
+ Telephone Systems: It’s used in some telephone switching systems.<br>
+ Military Applications: It has been used to route missiles.<br>
+
+</p>
+<h3>Advantages of Distance Vector routing</h3>
+<br>
+<p>
+   Shortest Path: Distance Vector Routing finds the shortest path for data to travel in a
+    network.<br>
+   Usage: It is used in local, metropolitan, and wide-area networks.<br>
+   Easy Implementation: The method is simple to set up and doesn’t require many
+    resources.<br>
+
+          </p>
+          <h3>Disadvantages of Distance Vector Routing Algorithm</h3>
+          <br>
+          <p>
+             It is slower to converge than link state.<br>
+             It is at risk from the count-to-infinity problem.<br>
+             It creates more traffic than link state since a hop count change must be propagated to all
+              routers and processed on each router.<br> Hop count updates take place on a periodic basis,
+              even if there are no changes in the network topology, so bandwidth-wasting broadcasts
+              still occur.<br>
+
+
+          </p>
+          <h3>Hierarchical routing</h3>
+          <br>
+          <p>
+             Hierarchical routing protocols consist of a hierarchical topology to organize the network and
+              routing information.<br>
+             Multiple layers and levels are introduced in a network. Each layer may be assigned a
+              different responsibility like forwarding packets, maintaining routing tables, etc.<br>
+             HRPs are valuable for large networks, as they provide the capability of organizing network
+              information and reducing the amount of routing information that should be exchanged
+              between nodes.<br>
+             Hence, HRPs demonstrate significant scalability and fault tolerance.<br>
+             This is attributed to their hierarchical structure, which provides redundancy and facilitates
+              the efficient distribution of routing data throughout the network<br>
+
+
+          </p>
+          
+            
+            <p>
+              Explanation<br>
+         Step 1 − For example, the best path from 1A to 5C is via region 2, but hierarchical
+                routing of all traffic to region 5 goes via region 3 as it is better for most of the other destinations
+                of region 5.<br>
+        Step 2 − Consider a subnet of 720 routers. If no hierarchy is used, each router will have
+               720 entries in its routing table.<br>
+        Step 3 − Now if the subnet is partitioned into 24 regions of 30 routers each, then each
+                router will require 30 local entries and 23 remote entries for a total of 53 entries.<br>
+
+
+        </p>
+        <h3>Advantages</h3>
+        <br>
+        <p>
+           Reduction in Table Size: HSR protocol reduces the routing table size by making use of
+            hierarchy information.<br> The storage space required is of O(N x M) whereas in flat
+            topology the space required is O(NM). Here, N is the average number of nodes in a
+            cluster and m is the number of levels.<br>
+
+
+        </p>
+        <h3>Disadvantages</h3>
+        <br>
+        <p>
+           Overhead Involved: The overhead for exchanging packets containing information about
+            multiple levels of hierarchy and cluster head appointment process makes the protocol
+            expensive from the ad hoc wireless network point of view.<br>
+           Scalability: The number of nodes involved in an ad hoc network does not grow to the
+           dimensions of the number of nodes in the Internet which is more suited for hierarchical
+           routing.<br>
+           Time Consuming: Sharing information across all levels of the hierarchy and conducting
+           leader elections within each cluster is a time-consuming process.<br>
+
+
+        </p>
+        <h3>Link state routing</h3>
+        <br>
+        <p>
+          Link state routing is a technique in which each router shares the knowledge of its
+          neighborhood with every other router i.e. the internet work.<br> The three keys to understand the
+          link state routing algorithm.<br>
+        o The Link state routing algorithm is also known as Dijkstra's algorithm which is used to find
+          the shortest path from one node to every other node in the network.<br>
+        o The Dijkstra's algorithm is an iterative, and it has the property that after kth iteration of the
+          algorithm, the least cost paths are well known for k destination nodes.<br>
+
+
+        </p> 
+        <h3>Link State Routing has two phases:</h3>
+        <br>
+        <p>
+          Reliable Flooding<br>
+       o Initial state: Each node knows the cost of its neighbors.<br>
+       o Final state: Each node knows the entire graph.<br>
+
+
+        </p>
+               
+
+        </div>
+
+        
+
+
+        <footer>
+        <p>kv compound sindhanur</p>
+    </footer>
+    </body> 
+</html>     
